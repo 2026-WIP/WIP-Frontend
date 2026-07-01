@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Geist:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; }
+
+/* ── CSS 테마 변수 ─────────────────────────────────────────────── */
+:root {
+  --bg-app:       #f9f9f9;
+  --bg-surface:   #ffffff;
+  --bg-sidebar:   #eeeeee;
+  --bg-panel:     #f3f3f3;
+  --bg-hover:     #f3f3f3;
+  --bg-active:    #e2e2e2;
+  --text-primary: #121212;
+  --text-secondary: #494737;
+  --text-muted:   #7a7865;
+  --border:       #e2e2e2;
+  --border-focus: #121212;
+  --yellow:       #f2e974;
+  --yellow-text:  #6e6800;
+  --error:        #ba1a1a;
+}
+
+[data-theme='dark'] {
+  --bg-app:       #0d0d0d;
+  --bg-surface:   #1a1a1a;
+  --bg-sidebar:   #111111;
+  --bg-panel:     #222222;
+  --bg-hover:     #2a2a2a;
+  --bg-active:    #333333;
+  --text-primary: #f0f0f0;
+  --text-secondary: #c0bdb0;
+  --text-muted:   #888880;
+  --border:       #2e2e2e;
+  --border-focus: #f0f0f0;
+  --yellow:       #f2e974;
+  --yellow-text:  #6e6800;
+  --error:        #f28b82;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Noto Sans KR', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 200ms, color 200ms;
+}
+
+h1, h2, h3 { font-family: 'Geist', 'Noto Sans KR', system-ui, sans-serif; }
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.diff-added { background-color: rgba(155, 240, 252, 0.1); }
+.diff-removed { background-color: rgba(186, 26, 26, 0.05); }
+.syntax-error { text-decoration: underline wavy #ba1a1a; }
+
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e2e2; border-radius: 3px; }
